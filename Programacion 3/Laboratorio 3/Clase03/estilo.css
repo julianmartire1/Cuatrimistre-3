@@ -1,0 +1,13 @@
+.Subrayado
+{
+  color: red;
+  text-decoration: underline;/*Subraya el texto*/
+}
+.NoSubrayado
+{
+  color: blue;
+}
+.Tachar
+{
+  text-decoration: line-through;
+}
