@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 20 - Bootstrap</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text-javascript" src="funciones.js"></script>
+    <!--Generar una página que posea un formulario con al menos cinco controles de entrada de datos. 
+    Aplique distintos estilos a los controles y envíe la información hacia otra página, 
+    la cual mostrará los datos enviados y aplicará otros estilos a los controles. -->
+</head>
+<body>
+    <form class="form-inline" action="administrador.php" method="POST">
+        <header style="background:red">
+            <div style="background:greenyellow" class="container">
+                FORMULARIO
+            </div>
+        </header>
+        <div class="container-fluid"><label for="label label-default">Nombre:</label></div>
+        <input class="form-control" type="text" name="txtNombre" placeholder="Ingrese nombre">
+            <select class="form-control" name="cambiarColorNombre">
+                    <option value="red">Rojo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="yellow">Amarillo</option>
+                    <option value="maroon">Maroon</option>
+            </select>
+        <div class="container-fluid"><label for="label label-default">Edad:</label></div>
+        <input class="form-control" type="text" name="txtEdad" placeholder="Ingrese edad">
+                <select class="form-control" name="cambiarColorEdad">
+                    <option value="red">Rojo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="yellow">Amarillo</option>
+                    <option value="maroon">Maroon</option>
+                </select>
+        <div class="container-fluid"><label for="label label-default">Email:</label></div>
+        <input class="form-control" type="email" name="txtEmail" placeholder="Ingrese e-mail">
+                <select class="form-control" name="cambiarColorEmail">
+                    <option value="red">Rojo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="yellow">Amarillo</option>
+                    <option value="maroon">Maroon</option>
+                </select>
+        <div class="container-fluid"><label for="label label-default">Password:</label></div>
+        <input class="form-control" type="password" name="txtPassword" placeholder="Ingrese password">
+                <select class="form-control" name="cambiarColorPassword">
+                    <option value="red">Rojo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="yellow">Amarillo</option>
+                    <option value="maroon">Maroon</option>
+                </select>
+        <div class="container-fluid"><label for="label label-default">País:</label></div>
+        <input class="form-control" type="text" name="txtPais" placeholder="Ingrese país">
+                <select class="form-control" name="cambiarColorPais">
+                    <option value="red">Rojo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="yellow">Amarillo</option>
+                    <option value="maroon">Maroon</option>
+                </select>
+        <br/>
+        <br/>
+        <input class="btn btn-success" type="submit" value="Enviar" name="Enviar">
+    </form>
+</body>
+</html>

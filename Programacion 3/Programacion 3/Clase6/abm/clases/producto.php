@@ -68,13 +68,14 @@ class Producto
 			$n=$obj->nombre;
 			$pF=$obj->pathFoto;*/
 			$pdo=new PDO("mysql:dbname=productos","root","");
-			$band=$pdo->prepare("SELECT codigo_barra AS codBarra, nombre, path_foto AS pathFoto FROM producto");
- 			$band->execute();
+			$band=$pdo->prepare("SELECT * FROM `producto` WHERE 1");
 
-			while ($prod=$band->fetchObject("Producto")) {
+			while ($prod=$band->fetchobject("Producto")) {
 				array_push($ListaDeProductosLeidos,$prod);
 			}
 
+			$band->execute();
+			var_dump($ListaDeProductosLeidos);
 			return $ListaDeProductosLeidos;
 		} catch (PDOException $e) {
   			echo $e->getMessage();
@@ -103,39 +104,6 @@ class Producto
 				return false;
 		}
 
-
-	}
-
-	public function BajaBD($nombre,$codBarra)
-	{
-		try {
-			$pdo=new PDO("mysql:dbname=productos","root","");
-			$band=$pdo->prepare("DELETE FROM `producto` WHERE nombre='$nombre' AND codigo_barra='$codBarra'");
-
-			$band->execute();
-
-			return $band;
-		} catch (PDOException $e) {
-			echo $e->getMessage();
-			return false;
-		}
-
-	}
-
-	public function ModificarBD($cod,$nom,$path)
-	{
-		try {
-
-			$pdo=new PDO("mysql:dbname=productos","root","");
-			$band=$pdo->prepare("UPDATE `producto` SET `codigo_barra`='$cod',`nombre`='$nom',`path_foto`='$path' WHERE codigo_barra='$cod'");
-
-			$band->execute();
-
-			return $band;
-		} catch (PDOException $e) {
-			echo $e->getMessage();
-			return false;
-		}
 
 	}
 
