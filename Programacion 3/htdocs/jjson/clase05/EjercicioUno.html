@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Uno/Dos</title>
+    <script type="text/javascript">
+    
+    var producto = { "codigoBarra": 123, "nombre": "Fideos", "precio": "$12" };
+
+    alert("Objeto simple:");
+    console.log("Objeto simple:");
+
+    alert(producto.codigoBarra + " - " + producto.nombre + " - " + producto.precio);
+
+    console.log(producto.codigoBarra + " - " + producto.nombre + " - " + producto.precio);
+
+    var arrayDeProductos = [{ "codigoBarra": 123, "nombre": "Fideos", "precio": "$12" },
+                            { "codigoBarra": 124, "nombre": "Tomate", "precio": "$7"},
+                            { "codigoBarra": 125, "nombre": "Carne", "precio": "$40"}
+                           ];
+    
+    alert("Array de productos:");
+    console.log("Array de productos:");
+
+    for(var i = 0; i < arrayDeProductos.length; i++)
+    {
+        alert(arrayDeProductos[i].codigoBarra + " - " + arrayDeProductos[i].nombre + " - " + arrayDeProductos[i].precio); 
+        console.log(arrayDeProductos[i].codigoBarra + " - " + arrayDeProductos[i].nombre + " - " + arrayDeProductos[i].precio); 
+    }
+                
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

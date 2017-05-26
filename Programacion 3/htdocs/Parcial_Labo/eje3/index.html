@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <title>eje3</title>
+    <script type="text/javascript">
+
+    function random()
+    {
+
+        $.ajax({
+            type:"POST",
+            url:"backend/delay.php",
+            data:$("#form").serialize(),
+            success: function(data)
+             {
+                document.getElementById("progreso").style.width=data+"%";
+                console.log(data);
+             }
+        })
+
+    }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <form id="form">
+              <!--BOTON-->
+              <input type="button" class="btn-primary" onclick="random()" value="RANDOM">
+              <!--BARRA PROGRESO-->
+              <div class="progress progress-striped active">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:10%" id="progreso">
+                  </div>
+              </div>
+          </form>
+          </div>
+    </div>
+</body>
+</html>

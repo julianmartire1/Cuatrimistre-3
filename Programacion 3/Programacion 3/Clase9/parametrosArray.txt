@@ -1,0 +1,25 @@
+//AGREGO TIPO COMPLEJO, INFORMANDO SU ESTRUCTURA	
+	$server->wsdl->addComplexType(
+									'Persona',
+									'complexType',
+									'struct',
+									'all',
+									'',
+									array('Nombre' => array('name' => 'Nombre', 'type' => 'xsd:string'),
+										  'Edad' => array('name' => 'Edad', 'type' => 'xsd:int'),
+										  'Sexo' => array('name' => 'Sexo', 'type' => 'xsd:string')
+										 )
+								);
+///**********************************************************************************************************///								
+//REGISTRO METODO CON PARAMETRO DE ENTRADA COMPLEJO Y PARAMETRO DE SALIDA 'SIMPLE'
+	$server->register('SaludarPersona',                	
+						array('Persona' => 'tns:Persona'),  
+						array('return' => 'xsd:string'),   
+						'urn:testWSDL',                		
+						'urn:testWSDL#SaludarPersona',             
+						'rpc',                        		
+						'encoded',                    		
+						'Saluda a una persona'    			
+					);
+
+

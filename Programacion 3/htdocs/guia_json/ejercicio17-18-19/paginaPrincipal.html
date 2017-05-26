@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 17-18-19</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="funciones.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <!-- 
+       Aplicación Nº 18 (Quitar elemento a un archivo .json)  A la aplicación del punto anterior, 
+       agregarle al listado una columna extra (ACCION) que posea un elemento <a> (cuyo texto sea Eliminar)
+            que permita quitar el elemento seleccionado del archivo remeras .json , previa confirmación por parte del usuario. 
+            Como página nexo, utilice administrarRemeras.php, pasándole la opción “quitarRemera”
+             y el ID de la remera (objJSON.id) a ser eliminado. 
+ 
+    -->
+</head>
+<body>
+    <form id="form">
+        <input type="text" name="id" placeholder="ID" required>
+        </br>
+        <input type="text" name="slogan" placeholder="Slogan" required>
+        </br>
+        <input type="text" name="size" placeholder="Tamaño" required>
+        </br>
+        <input type="text" name="price" placeholder="Precio" required>
+        </br>
+        <input type="text" name="color" placeholder="Color" required>
+        </br>
+        <input type="text" name="manofacturer" placeholder="Fabricante" required>
+        </br>
+        <input type="text" name="logo" placeholder="Logo" required>
+        </br>
+        <input type="text" name="country" placeholder="País" required>
+        </br>
+        <input type="text" name="city" placeholder="Ciudad" required>
+        </br>
+        </br>
+        <input type="button" class="btn btn-success" value="Agregar remera" onclick="agregarRemera()">
+        <input type="button" class="btn btn-primary" value="Listar remeras" onclick="listarRemeras()">
+
+        <div id="listado">
+
+        </div>
+    </form>
+</body>
+</html>

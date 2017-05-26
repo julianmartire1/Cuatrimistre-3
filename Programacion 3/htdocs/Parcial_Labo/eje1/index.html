@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>eje1</title>
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  
+  function cambiarColor()
+  {
+      document.body.style.backgroundColor=document.getElementById("color").value;
+  }
+  
+</script>
+</head>
+<body>
+  <div class="containers">
+    <input type="color" id="color">
+    <input  class="btn-primary" type="button" value="CAMBIAR COLOR" onclick="cambiarColor()">
+  </div>
+</body>
+</html>

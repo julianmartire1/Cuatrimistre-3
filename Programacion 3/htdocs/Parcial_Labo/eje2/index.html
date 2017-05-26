@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eje2</title>
+     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    
+    function rango()
+    {
+        var x=document.getElementById("rango").value;
+        document.getElementById("barra").style="width: "+x+"%";
+        console.info(x+"%");
+    }
+
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <!--RANGO-->
+        <input type="range" id="rango" aria-valuemin="0%" aria-valuemax="100%" value="10" onclick="rango()">
+        <!--BARRA PROGRESO-->
+            <div class="progress progress-striped active">
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 10%" id="barra">
+                </div>
+            </div>
+    </div>
+    
+</body>
+</html>

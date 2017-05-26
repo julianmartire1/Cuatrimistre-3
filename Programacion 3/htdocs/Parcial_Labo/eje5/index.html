@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+
+    function random()
+    {
+      $.ajax({
+          type:"POST",
+          url:"backend/array.php",
+          data:$("#form").serialize(),
+          success: function(data)
+           {
+             var resultado = "";
+
+              for (var index = 0; index < data.length; index++)
+              {
+                  if (index != (data.length)-1)
+                  {
+                      resultado += data[index]+" - ";
+                  }
+                  else
+                  {
+                      resultado += data[index];
+                  }
+              }
+
+              $("#alert").html(resultado);
+
+                var tabla="<table><tr><th>Sexo</th></tr>";
+
+                for (var i = 0; i < data.length; i++) {
+                  if(data[i]== "M")
+                  tabla+="<tr class='info'><td>"+data[i]+"</td</tr>";
+                  else if (data[i]== "F") {
+                    tabla+="<tr  class='danger'><td>"+data[i]+"</td</tr>";
+                  }
+                }
+                tabla+="</table>";
+                $("#tabla").html(tabla);
+           }
+      })
+    }
+
+  </script>
+
+  <title>eje4</title>
+</head>
+<body>
+
+  <div class="container">
+    <form id="form">
+      <!--BOTON-->
+      <input type="button" class="btn btn-primary" onclick="random()" value="TABLA RANDOM">
+      <div class="alert alert-info" id="alert">
+      </div>
+      <table class="table" id="tabla">
+      </table>
+    </form>
+  </div>
+
+</body>
+</html>
